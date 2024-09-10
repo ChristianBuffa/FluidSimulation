@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class ParticleDisplay3D : MonoBehaviour
 {
-
     public Shader shader;
     public float scale;
     Mesh mesh;
@@ -35,7 +34,6 @@ public class ParticleDisplay3D : MonoBehaviour
 
     void LateUpdate()
     {
-
         UpdateSettings();
         Graphics.DrawMeshInstancedIndirect(mesh, 0, mat, bounds, argsBuffer);
     }

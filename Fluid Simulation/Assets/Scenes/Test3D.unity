@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 657535194}
   - component: {fileID: 657535193}
   - component: {fileID: 657535192}
+  - component: {fileID: 657535195}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -214,6 +215,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &657535195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657535191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd3bf089942d4b43aa64c4d058b31e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raymarching: {fileID: 7200000, guid: 54c0b3f2e345b8746a2eca89840e6719, type: 3}
+  cam: {fileID: 657535193}
+  simulation3D: {fileID: 1188023495}
+  viewRadius: 0.1
+  blendStrength: 0.5
+  waterColor: {r: 0, g: 0.09080076, b: 1, a: 0}
+  ambientLight: {r: 1, g: 1, b: 1, a: 0}
+  lightSource: {fileID: 1175673481}
 --- !u!1 &1133728658
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +247,6 @@ GameObject:
   - component: {fileID: 1133728661}
   - component: {fileID: 1133728660}
   - component: {fileID: 1133728659}
-  - component: {fileID: 1133728663}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -320,23 +340,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1188023492}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1133728663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133728658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e945c1d0269e0214b83b9c815476e9dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shapeType: 0
-  operation: 0
-  colour: {r: 1, g: 1, b: 1, a: 1}
-  blendStrength: 0
-  numChildren: 0
 --- !u!1 &1175673480
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99a384512b94654fbeb7c06c43f81ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numParticlesPerAxis: 35
+  numParticlesPerAxis: 3
   centre: {x: 0, y: 0.5, z: 0}
   size: 3.7
   initialVel:
@@ -487,7 +490,7 @@ MonoBehaviour:
     z: 0
   jitterStrength: 0.0035
   showSpawnBounds: 1
-  debug_numParticles: 42875
+  debug_numParticles: 27
 --- !u!114 &1188023494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,7 +498,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188023491}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdfe3008efbf29745879ab1d40574478, type: 3}
   m_Name: 

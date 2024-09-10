@@ -88,8 +88,7 @@ float4 SceneInfo(float3 eye) {
 
         float localDst = GetShapeDistance(particle,eye);
         float3 localColour = waterColor;
-
-
+        
         float4 globalCombined = Combine(globalDst, localDst, globalColour, localColour);
         globalColour = globalCombined.xyz;
         globalDst = globalCombined.w;        
