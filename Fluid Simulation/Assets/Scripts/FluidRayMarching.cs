@@ -49,7 +49,7 @@ public class FluidRayMarching : MonoBehaviour
     public void Begin() {
         // SpawnParticlesInBox();
         InitRenderTexture();
-        raymarching.SetBuffer(0,"particles",simulation3D.velocityBuffer);
+        raymarching.SetBuffer(0,"particles",simulation3D.positionBuffer);
         raymarching.SetInt("numParticles",simulation3D.spawner.debug_numParticles);
         raymarching.SetFloat("particleRadius", viewRadius);
         raymarching.SetFloat("blendStrength", blendStrength);

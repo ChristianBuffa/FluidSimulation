@@ -230,7 +230,7 @@ MonoBehaviour:
   raymarching: {fileID: 7200000, guid: 54c0b3f2e345b8746a2eca89840e6719, type: 3}
   cam: {fileID: 657535193}
   simulation3D: {fileID: 1188023495}
-  viewRadius: 0.1
+  viewRadius: 0.01
   blendStrength: 0.5
   waterColor: {r: 0, g: 0.09080076, b: 1, a: 0}
   ambientLight: {r: 1, g: 1, b: 1, a: 0}
@@ -334,7 +334,7 @@ Transform:
   m_GameObject: {fileID: 1133728658}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.607, z: 0}
   m_LocalScale: {x: 1, y: 0.001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99a384512b94654fbeb7c06c43f81ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numParticlesPerAxis: 3
+  numParticlesPerAxis: 10
   centre: {x: 0, y: 0.5, z: 0}
   size: 3.7
   initialVel:
@@ -490,7 +490,7 @@ MonoBehaviour:
     z: 0
   jitterStrength: 0.0035
   showSpawnBounds: 1
-  debug_numParticles: 27
+  debug_numParticles: 1000
 --- !u!114 &1188023494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188023491}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdfe3008efbf29745879ab1d40574478, type: 3}
   m_Name: 

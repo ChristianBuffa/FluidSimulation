@@ -20,7 +20,7 @@ struct Particle
     float3 position;
 };
 
-StructuredBuffer<Particle> particles;
+StructuredBuffer<float3> particles;
 int numParticles;
 float particleRadius;
 float blendStrength;
@@ -72,9 +72,9 @@ float4 Combine(float dstA, float dstB, float3 colourA, float3 colourB) {
     return float4(colour,dst);
 }
 
-float GetShapeDistance(Particle particle, float3 eye) {
+float GetShapeDistance(float3 particle, float3 eye) {
    
-    return SphereDistance(eye, particle.position, particleRadius);
+    return SphereDistance(eye, particle, particleRadius);
     return maxDst;
 }
 
@@ -84,7 +84,7 @@ float4 SceneInfo(float3 eye) {
     float3 globalColour = waterColor;
     
     for (int i = 0; i < numParticles; i ++) {
-        Particle particle = particles[i];
+        float3 particle = particles[i];
 
         float localDst = GetShapeDistance(particle,eye);
         float3 localColour = waterColor;
